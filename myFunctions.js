@@ -58,7 +58,7 @@ function validateForm() {
     });
 
     let tax = total * 0.10;
-    let net = total - tax;
+    let net = total + tax;
 
     alert(
         "الوجبات المختارة:\n" + selected.join("\n") +
