@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meals</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="myFunctions.js"></script>
+</head>
+<body>
+
+<h1>قائمة الوجبات</h1>
+
+<table>
+<tr>
+<th>الصورة</th>
+<th>الرمز</th>
+<th>الوجبة</th>
+<th>السعر</th>
+<th>إظهار التفاصيل</th>
+<th>اختيار</th>
+</tr>
+
+<!-- حمص -->
+<tr>
+<td><img src="images/hummus.jpg" width="120"></td>
+<td>HM-001</td>
+<td>حمص</td>
+<td>8000</td>
+<td><input type="checkbox" onclick="toggleDetails('d1')"></td>
+<td><input type="checkbox" class="choose" data-name="حمص" data-price="8000"></td>
+</tr>
+<tr id="d1" class="details">
+<td colspan="6">المكونات: حمص بطحينة – زيت زيتون – ليمون – ثوم</td>
+</tr>
+
+<!-- فول -->
+<tr>
+<td><img src="images/foul.jpg" width="120"></td>
+<td>FL-002</td>
+<td>فول</td>
+<td>7000</td>
+<td><input type="checkbox" onclick="toggleDetails('d2')"></td>
+<td><input type="checkbox" class="choose" data-name="فول" data-price="7000"></td>
+</tr>
+<tr id="d2" class="details">
+<td colspan="6">المكونات: فول بزيت الزيتون – كمون – ليمون – بقدونس</td>
+</tr>
+
+<!-- مسبحة -->
+<tr>
+<td><img src="images/msabaha.jpg" width="120"></td>
+<td>MS-003</td>
+<td>مسبحة</td>
+<td>9000</td>
+<td><input type="checkbox" onclick="toggleDetails('d3')"></td>
+<td><input type="checkbox" class="choose" data-name="مسبحة" data-price="9000"></td>
+</tr>
+<tr id="d3" class="details">
+<td colspan="6">المكونات: حمص ناعم – طحينة – ليمون – ثوم</td>
+</tr>
+
+<!-- فلافل -->
+<tr>
+<td><img src="images/falafel.jpg" width="120"></td>
+<td>FLF-004</td>
+<td>فلافل</td>
+<td>6000</td>
+<td><input type="checkbox" onclick="toggleDetails('d4')"></td>
+<td><input type="checkbox" class="choose" data-name="فلافل" data-price="6000"></td>
+</tr>
+<tr id="d4" class="details">
+<td colspan="6">المكونات: فلافل مقرمشة – سلطة – مخلل</td>
+</tr>
+
+<!-- مقالي -->
+<tr>
+<td><img src="images/maqali.jpg" width="120"></td>
+<td>MK-005</td>
+<td>مقالي</td>
+<td>10000</td>
+<td><input type="checkbox" onclick="toggleDetails('d5')"></td>
+<td><input type="checkbox" class="choose" data-name="مقالي" data-price="10000"></td>
+</tr>
+<tr id="d5" class="details">
+<td colspan="6">المكونات: بطاطا – باذنجان – كوسا – - زهرا</td>
+</tr>
+
+</table>
+
+<br>
+<button onclick="showForm()">متابعة</button>
+
+<br><br>
+
+<div id="orderForm" style="display:none; text-align:center;">
+<h2>نموذج الطلب</h2>
+
+<form onsubmit="return validateForm()">
+
+الاسم الكامل (إنكليزي):  
+<input type="text" id="fullName"><br>
+
+رقم الحساب المصرفي (إجباري):  
+<input type="text" id="bank"><br>
+
+تاريخ الطلب:  
+<input type="text" id="date" placeholder="dd-mm-yyyy"><br>
+
+رقم الموبايل:  
+<input type="text" id="mobile"><br>
+
+<br>
+<button type="submit">إرسال</button>
+
+</form>
+</div>
+
+<br>
+<a href="home.html"><button>الرئيسية</button></a>
+<a href="AboutUs.html"><button>من نحن</button></a>
+
+</body>
+</html>
